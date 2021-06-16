@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
 import { Card, Typography, CardContent, Grid, Container } from '@material-ui/core';
-import logo from './logo.svg';
+import "@fontsource/source-code-pro"
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import './App.css';
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: [
+      'Source Code Pro'
+    ].join(','),
+    fontSize: '24'
+  },
+});
 
 class App extends Component {
   renderMainCards() {
     return <Grid container item md={6} spacing={2}>
-    <Grid item md={6}>
+    <Grid item xs={6}>
       <Card>
         <CardContent>
           <Typography>
@@ -15,7 +25,7 @@ class App extends Component {
         </CardContent>
       </Card>
     </Grid>
-    <Grid item md={6}>
+    <Grid item xs={6}>
       <Card>
       <CardContent>
           <Typography>
@@ -24,7 +34,7 @@ class App extends Component {
         </CardContent>
       </Card>
     </Grid>
-    <Grid item md={6}>
+    <Grid item xs={6}>
       <Card>
       <CardContent>
           <Typography>
@@ -33,7 +43,7 @@ class App extends Component {
         </CardContent>
       </Card>
     </Grid>
-    <Grid item md={6}>
+    <Grid item xs={6}>
       <Card>
       <CardContent>
           <Typography>
@@ -47,20 +57,25 @@ class App extends Component {
 
   render() {
     return (
-      <Grid container xs={12}>
-        <Grid item sm={6} xs={12}>
-          <Card>
-            <CardContent>
-              <Container align="center">
-                <Typography align="center">
-                  kristofer buno
-                </Typography>
-              </Container>
-            </CardContent>
-          </Card>
+      <MuiThemeProvider theme={theme}>
+        <Grid container xs={12}>
+          <Grid item sm={12} md={6}>
+            <Card>
+              <CardContent>
+                <Container align="center">
+                  <Typography align="center">
+                    kristofer buno
+                  </Typography>
+                  <Typography align="center">
+                    software engineering intern
+                  </Typography>
+                </Container>
+              </CardContent>
+            </Card>
+          </Grid>
+          {this.renderMainCards()}
         </Grid>
-        {this.renderMainCards()}
-      </Grid>
+      </MuiThemeProvider>
     );
   }
 }
