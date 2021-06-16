@@ -22,3 +22,15 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.MuiGrid-grid-xs-12 > .MuiGrid-root.MuiGrid-item {
+  padding: 1em !important;
+}
+
+.MuiGrid-grid-xs-12 {
+  height: 100%;
+}
+
+.MuiPaper-root.MuiCard-root {
+  height: 100%
+}

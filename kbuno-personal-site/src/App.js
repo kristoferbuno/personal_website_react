@@ -1,19 +1,60 @@
 import React, { Component } from 'react';
+import { Card, Typography, CardContent, Grid } from '@material-ui/core';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Grid container xs={12}>
+        <Grid item lg={6}>
+          <Card>
+            <CardContent>
+              <Typography>
+                kristofer buno
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid container item lg={6} spacing={2}>
+          <Grid item lg={6}>
+            <Card>
+              <CardContent>
+                <Typography>
+                  kristofer buno
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item lg={6}>
+            <Card>
+            <CardContent>
+                <Typography>
+                  kristofer buno
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item lg={6}>
+            <Card>
+            <CardContent>
+                <Typography>
+                  kristofer buno
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item lg={6}>
+            <Card>
+            <CardContent>
+                <Typography>
+                  kristofer buno
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+      </Grid>
     );
   }
 }
