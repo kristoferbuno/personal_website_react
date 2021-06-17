@@ -70,14 +70,18 @@ class App extends Component {
     </Grid>
     <Grid item xs={6}>
       <Card>
-        <CardContent>
-          <Grid container direction="row" alignItems="center">
-            <ReceiptIcon />
-            <Typography style={{marginLeft: '0.5em'}}>
-              resume
-            </Typography>
-          </Grid>
-        </CardContent>
+      <CardActionArea onClick={() => {
+          window.location.href = "/buno_kristofer_resume.pdf"
+        }}>
+          <CardContent>
+            <Grid container direction="row" alignItems="center">
+              <ReceiptIcon />
+              <Typography style={{marginLeft: '0.5em'}}>
+                resume
+              </Typography>
+            </Grid>
+          </CardContent>
+        </CardActionArea>
       </Card>
     </Grid>
     <Grid item xs={6}>
@@ -114,7 +118,7 @@ class App extends Component {
               i'm a cs student at the <p style={{color:"#FF7700", display:"inline"}}> university of florida</p>, planning to graduate in either dec 2022 or may 2023
           </Typography>
           <Typography>
-              i like to <p style={{color:"#999", display:"inline"}}>wear many hats</p> - i learn technologies quick to focus on the big picture of making solutions
+              i like to <p style={{color:"purple", display:"inline"}}>wear many hats</p> - i learn technologies quick to focus on the big picture of making solutions
           </Typography>
           <Typography>
               i love lifting weights, cooking, <p style={{color:"#88CCFF", display:"inline"}}>snowboarding</p>, longboarding, and getting into new sports
