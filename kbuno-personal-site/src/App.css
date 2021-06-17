@@ -49,3 +49,7 @@
 .MuiGrid-spacing-xs-2 > .MuiGrid-item {
   height: 50%;
 }
+
+#me_container > .MuiTypography-root {
+  width: 100%;
+}
