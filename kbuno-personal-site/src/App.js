@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Typography, CardContent, Grid, Container, CardActionArea } from '@material-ui/core';
+import { Card, Typography, CardContent, Grid, Container, CardActionArea, Link } from '@material-ui/core';
 import "@fontsource/source-code-pro"
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import FaceIcon from '@material-ui/icons/Face';
@@ -108,16 +108,16 @@ class App extends Component {
         </CardActionArea>
         <CardContent id="about_me_content">
           <Typography>
-              hi, i'm kristofer buno
+              hi, i'm <p style={{color:"#22FF22", display:"inline"}}>kristofer buno</p>
           </Typography>
           <Typography>
-              i'm a cs student at the university of florida, planning to graduate in either dec 2022 or may 2023
+              i'm a cs student at the <p style={{color:"#FF7700", display:"inline"}}> university of florida</p>, planning to graduate in either dec 2022 or may 2023
           </Typography>
           <Typography>
-              i like to wear many hats - i learn technologies quick to focus on the big picture of making solutions
+              i like to <p style={{color:"#999", display:"inline"}}>wear many hats</p> - i learn technologies quick to focus on the big picture of making solutions
           </Typography>
           <Typography>
-              i love lifting weights, cooking, snowboarding, longboarding, and getting into new sports
+              i love lifting weights, cooking, <p style={{color:"#88CCFF", display:"inline"}}>snowboarding</p>, longboarding, and getting into new sports
           </Typography>
           <Typography>
               if you want to get to know me better, talk to me!
@@ -144,7 +144,13 @@ class App extends Component {
         </CardActionArea>
         <CardContent id="about_me_content">
           <Typography>
-              [0] song analyzer
+            <a target="_blank" href="https://songs.kristoferbuno.com" style={{color:"#4444FF"}}>
+                [0] song analyzer
+            </a>
+            &nbsp;
+            <a target="_blank" href="https://github.com/kristoferbuno/song-analyzer-webapp" style={{color:"#4444FF"}}>
+                [github]
+            </a>
               <Typography variant='body2' className="indented">
               $ analyzes appropriateness of a song in 4 categories
               </Typography>
@@ -156,7 +162,10 @@ class App extends Component {
               </Typography>
           </Typography>
           <Typography>
-              [1] uf ap credit calculator
+              [1] uf ap credit calculator&nbsp;
+              <a target="_blank" href="https://github.com/kristoferbuno/uf-apcreditcalculator" style={{color:"#4444FF"}}>
+                [github]
+              </a>
               <Typography variant='body2' className="indented">
               $ calculates earned uf credit from ap exams
               </Typography>
@@ -165,7 +174,10 @@ class App extends Component {
               </Typography>
           </Typography>
           <Typography>
-              [2] stayin' alive
+              [2] stayin' alive&nbsp;
+              <a target="_blank" href="https://github.com/kristoferbuno/cpr-training-model" style={{color:"#4444FF"}}>
+                [github]
+              </a>
               <Typography variant='body2' className="indented">
               $ educates users on cpr with a Unity3D VR simulation
               </Typography>
@@ -174,7 +186,10 @@ class App extends Component {
               </Typography>
           </Typography>
           <Typography>
-              [3] personal website
+              [3] personal website&nbsp;
+              <a target="_blank" href="https://github.com/kristoferbuno/personal_website_react" style={{color:"#4444FF"}}>
+                [github]
+              </a>
               <Typography variant='body2' className="indented">
               $ simple website to organize my info
               </Typography>
