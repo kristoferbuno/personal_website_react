@@ -53,3 +53,28 @@
 #me_container > .MuiTypography-root {
   width: 100%;
 }
+
+
+.Typist {
+  width: 100%;
+  font-size: 2em;
+}
+
+.Typist .Cursor {
+  display: inline-block;
+}
+
+.Cursor--blinking {
+  opacity: 1;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.MuiGrid-spacing-xs-2 > * > * > .MuiButtonBase-root.MuiCardActionArea-root {
+  height: inherit;
+}

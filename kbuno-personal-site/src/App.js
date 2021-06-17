@@ -7,6 +7,7 @@ import BuildIcon from '@material-ui/icons/Build';
 import ReceiptIcon from '@material-ui/icons/Receipt';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import Typist from 'react-typist';
 import './App.css';
 
 const theme = createMuiTheme({
@@ -22,7 +23,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      active_panel: null
+      active_panel: null,
+      restart_type: false,
     }
   }
 
@@ -31,13 +33,9 @@ class App extends Component {
     this.setState({ active_panel: panel });
   }
 
-  fakeFunction() {
-    console.log("I am here for debugging purposes.")
-  }
-
   renderMainCards() {
     return <Grid container item md={6} spacing={2}>
-      <Grid item xs={6}>
+      <Grid id="main_card_grid" item xs={6}>
         <Card>
           <CardActionArea onClick={() => {
             this.handlePanelChange('about_me')
@@ -120,7 +118,19 @@ class App extends Component {
           </CardActionArea>
           <CardContent id="about_me_content">
             <Typography>
-              hi, i'm <p style={{ color: "#22FF22", display: "inline" }}>kristofer buno</p>
+                hi, i'm <p style={{color:"#22FF22", display:"inline"}}>kristofer buno</p>
+            </Typography>
+            <Typography>
+                i'm a cs student at the <p style={{color:"#FF7700", display:"inline"}}> university of florida</p>, planning to graduate in either dec 2022 or may 2023
+            </Typography>
+            <Typography>
+                i like to <p style={{color:"purple", display:"inline"}}>wear many hats</p> - i learn technologies quick to focus on the big picture of making solutions
+            </Typography>
+            <Typography>
+                i love lifting weights, cooking, <p style={{color:"#88CCFF", display:"inline"}}>snowboarding</p>, longboarding, and getting into new sports
+            </Typography>
+            <Typography>
+                if you want to get to know me better, talk to me!
             </Typography>
           </CardContent>
         </Card>
@@ -144,17 +154,17 @@ class App extends Component {
           </CardActionArea>
           <CardContent id="about_me_content">
             <Typography>
-              <a target="_blank" href="https://www.linkedin.com/in/kristoferbuno/" style={{ color: "#4444FF" }}>
+              * <a target="_blank" href="https://www.linkedin.com/in/kristoferbuno/" style={{ color: "#4444FF" }}>
                   linkedin
               </a>
             </Typography>
             <Typography>
-              <a target="_blank" href="https://github.com/kristoferbuno/" style={{ color: "#CCCCCC" }}>
+              * <a target="_blank" href="https://github.com/kristoferbuno/" style={{ color: "#CCCCCC" }}>
                   github
               </a>
             </Typography>
             <Typography>
-              <a target="_blank" href="mailto:krisbuno@gmail.com" style={{ color: "#FF2222" }}>
+              * <a target="_blank" href="mailto:krisbuno@gmail.com" style={{ color: "#FF2222" }}>
                   email
               </a>
             </Typography>
@@ -266,9 +276,8 @@ class App extends Component {
                   $ kristofer buno
                 </Typography>
                 <img src="kris.jpg" height="400px" width="400px" style={{'borderRadius':'16em'}}></img>
-                <Typography>
-                  software engineering intern
-                  </Typography>
+                <br></br>
+                {this.renderTypist()}
               </Container>
             </Card>
           </Grid>
@@ -276,6 +285,39 @@ class App extends Component {
         </Grid>
       </MuiThemeProvider>
     );
+  }
+
+  restartTypeCycle() {
+    this.setState({restart_type: false});
+    return <div></div>;
+  }
+
+  renderTypist() {
+  return this.state.restart_type ? this.restartTypeCycle() : <Typist id="typist" onTypingDone={() => {
+      this.setState({restart_type: true});
+    }} avgTypingSpeed={40} startDelay={1000} style={{fontSize:"2em"}} cursor={{blink:true}}>
+        software engineer
+        <Typist.Backspace count={17} delay={5000} />
+        <Typist.Backspace count={0} delay={1000} />
+        uf computer science student
+        <Typist.Backspace count={27} delay={5000} />
+        <Typist.Backspace count={0} delay={1000} />
+        pro snowboarder (i wish)
+        <Typist.Backspace count={24} delay={5000} />
+        <Typist.Backspace count={0} delay={1000} />
+        boba enthusiast (black milk tea)
+        <Typist.Backspace count={32} delay={5000} />
+        <Typist.Backspace count={0} delay={1000} />
+        risky longboarder
+        <Typist.Backspace count={17} delay={5000} />
+        <Typist.Backspace count={0} delay={1000} />
+        proud filipino
+        <Typist.Backspace count={14} delay={5000} />
+        <Typist.Backspace count={0} delay={1000} />
+        UK alternative hip hop enjoyer (according to spotify)
+        <Typist.Backspace count={53} delay={5000} />
+        <Typist.Backspace count={0} delay={1000} />
+    </Typist>
   }
 }
 
