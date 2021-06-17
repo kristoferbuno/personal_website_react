@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Typography, CardContent, Grid, Container, CardActionArea, Link } from '@material-ui/core';
+import { Card, Typography, CardContent, Grid, Container, CardActionArea, Link, CardMedia } from '@material-ui/core';
 import "@fontsource/source-code-pro"
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import FaceIcon from '@material-ui/icons/Face';
@@ -84,13 +84,11 @@ class App extends Component {
         </CardActionArea>
       </Card>
     </Grid>
-    <Grid item xs={6}>
+    <Grid item xs={6} align="center">
       <Card>
-      <CardContent>
-          <Typography>
-            hi
-          </Typography>
-        </CardContent>
+        <CardMedia style={{'height': 'inherit', 'display': 'flex', 'justify-content': 'center','align-items': 'center'}}>
+          <img src="kb.png"></img>
+        </CardMedia>
       </Card>
     </Grid>
   </Grid>

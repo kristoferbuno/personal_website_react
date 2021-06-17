@@ -45,3 +45,7 @@
 .MuiTypography-root.indented {
   margin-left: 3em;
 }
+
+.MuiGrid-spacing-xs-2 > .MuiGrid-item {
+  height: 50%;
+}
