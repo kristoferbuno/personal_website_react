@@ -37,3 +37,11 @@
   color: white;
   border-radius: 0;
 }
+
+#about_me_content > p {
+  margin-bottom: 1em;
+}
+
+.MuiTypography-root.indented {
+  margin-left: 3em;
+}
